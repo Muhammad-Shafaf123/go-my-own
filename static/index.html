@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <body class="large-screen">
+    <div class="wrap">
+      <div class="btn-toolbar buttons">
+      </div>
+      <div class="table-wrapper">
+        <table class="table-responsive card-list-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Place</th>
+              <th>Company</th>
+              <th>Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            {{range .}}
+              <tr>
+                <td data-title="Column #1">{{.Number}}</td>
+                <td data-title="Column #2">{{.Name}}</td>
+                <td data-title="Column #3">{{.Age}}</td>
+                <td data-title="Column #4">{{.Place}}</td>
+                <td data-title="Column #5">{{.Company}}</td>
+                <td data-title="Column #6">{{.Position}}</td>
+              </tr>
+            {{end}}
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+</body>
+</html>
