@@ -1,7 +1,8 @@
 package template
 
 import (
-	"gomyown/employee"
+	"fmt"
+	db "gomyown/models"
 	"html/template"
 	"net/http"
 )
@@ -13,42 +14,16 @@ func ServeTemplateData(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 
-	empl01 := employee.Employee{
-		Number:   1,
-		Name:     "Shafaf",
-		Age:      22,
-		Region:   "India",
-		Position: "Software Developer",
-		Company:  "Zennode Technology",
-	}
-	empl02 := employee.Employee{
-		Number:   2,
-		Name:     "Jonh Deo",
-		Age:      25,
-		Region:   "Paris",
-		Position: "Software Engineer",
-		Company:  "Microsoft Corporation",
-	}
-	empl03 := employee.Employee{
-		Number:   3,
-		Name:     "Smith",
-		Age:      35,
-		Region:   "Europe",
-		Position: "Computer Engineer",
-		Company:  "Google",
-	}
-	empl04 := employee.Employee{
-		Number:   4,
-		Name:     "Herman",
-		Age:      31,
-		Region:   "Tokyo",
-		Position: "Managing Director",
-		Company:  "Apple",
+	employees, err := db.GetEmployees()
+
+	if err != nil {
+		fmt.Println(err.Error())
+		return
 	}
 
-	employee := []employee.Employee{empl01, empl02, empl03, empl04}
+	fmt.Println(employees)
 
-	err = tmpl.Execute(w, employee)
+	err = tmpl.Execute(w, employees)
 
 	if err != nil {
 		http.Error(w, "Internal Server Error!!!", http.StatusInternalServerError)
