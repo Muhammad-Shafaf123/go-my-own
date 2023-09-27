@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import "./home.css"
 import ADDIMG from "../Assets/image/ad-banner-sample.png"
-import ICONHOR1 from "../Assets/image/Group 17.png"
-import ICONVER2 from "../Assets/image/Group 2.svg"
 
 function Home() {
   return (
@@ -11,6 +9,7 @@ function Home() {
       <div className="container p-3">
         <AdNotice />
         <SearchBar />
+        <BodyList />
       </div>
     </div>
   )
@@ -18,21 +17,27 @@ function Home() {
 
 export default Home;
 
+const BodyList = () => {
+  return (
+    <div className="row mt-5">
+      
+    </div>
+  )
+}
+
 const SearchBar = () => {
   return(
     <div className="row searchbar-wrapper mt-5">
-      <div className="col-md-9">
+      <div className="col-md-10">
         <div className="form-group">
           <input type="text" className="form-control search-field"  placeholder="Search product" />
         </div>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-2">
         <SwitchTabber
-          name='booking_type'
-          label='Booking Type'
           options={[
-            { value: 'tele_in', label: 'Tele in', img : ICONHOR1 },
-            { value: 'walk_in', label: 'Walk in', img : ICONVER2 },
+            { value: 'grid', icone : true },
+            { value: 'hor', icone : false  },
           ]}
           defaultValue='tele_in'
         />
@@ -43,36 +48,26 @@ const SearchBar = () => {
 }
 
 
-
-
-
-
 const SwitchTabber= (props) => { 
   const { options, name, defaultValue } = props;
-  const [ toggled, setToggled ] = useState(null);
-
-  useEffect(() => {
-    setToggled(defaultValue);
-  }, [ defaultValue ]);
-
-  const handleChange = (event) => {
-    const value = event.currentTarget.value;
-    console.log(value);
-    setToggled(value);
-  };
+  const [ addClass, setAddClass ] = useState("hor");
 
   return(
     <div className="tabber-wrap">
       <div className="tabber">
         {
-          options.map((option, index) => (
-            <>
-              <input type="radio" name='hai' id={option.value} />
-              <label htmlFor={ option.value } className="label">
-                <img src={option?.img} alt="" style={{width: "4rem"}} />
-              </label>
-            </>
-          ))
+          options.map((option, index) => {
+            const grid = addClass === "grid" ? "active" : "";
+            const hor = addClass === "hor" ? "active" : "";
+            return(
+              <>
+                <input type="radio" name='hai' id={option.value} defaultChecked={true} onClick={()=>setAddClass(option.value)}/>
+                <label htmlFor={ option.value } className="label">
+                  {option?.icone ? <i className={`bi bi-grid-fill ${grid}`}></i> : <i class={`bi bi-square-half ${hor}`}></i>}
+                </label>
+              </>
+            )
+          })
         }
         <div className="blob" />
       </div>

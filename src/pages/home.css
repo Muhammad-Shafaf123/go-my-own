@@ -59,31 +59,31 @@ img.postion-absolute.img-ad-banner {
 }
 .tabber-wrap {
     display: flex;
+    margin-left: 5rem;
 }
 .tabber {
     position: relative;
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
     z-index: 0;
-    color: rgb(138, 138, 138);
-    font-size: 0.875rem;
     background-color: #FFFFFF;
-    border-radius: 3rem;
-    width: 14.2rem;
+    border-radius: 8px;
+    width: initial;
 }
 .tabber-wrap .tabber input[type=radio] {
     display: none;
 }
 .tabber-wrap .tabber label {
-    -webkit-user-select: none;
-    user-select: none;
     padding: 0.3rem 0.85rem;
-    cursor: pointer;
-    white-space: nowrap;
+    height: 55px;
 }
 input[type="radio"]:checked + label {
-    background: red;
+    background: #000;
+    border-radius: 6px;
+}
+.tabber-wrap .tabber i {
+    font-size: 30px;
+}
+.tabber-wrap .tabber i.active {
+    color: #fff;
 }
 /*
 -- SearchBar End --
