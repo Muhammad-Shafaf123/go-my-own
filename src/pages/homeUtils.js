@@ -19,4 +19,20 @@ const SampleBasicData = [
     }
 ]
 
-export { SampleBasicData }
+const sampleData = [
+    {
+        Id : 1,
+        Name : "Mahindra Thar",
+        Price : 16000,
+        Rating : 4,
+    },
+    {
+        Id : 2,
+        Name : "Maruti jimny",
+        Price : 18000,
+        Rating : 4.5,
+        
+    }  
+]
+
+export { SampleBasicData, sampleData }

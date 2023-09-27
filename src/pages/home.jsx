@@ -1,72 +1,104 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { SampleBasicData } from './homeUtils';
 import "./home.css"
+import ADDIMG from "../Assets/image/ad-banner-sample.png"
+import ICONHOR1 from "../Assets/image/Group 17.png"
+import ICONVER2 from "../Assets/image/Group 2.svg"
 
 function Home() {
   return (
     <div className="root-wrap">
-      <div className="container p-4">
-        <div className="row">
-          <h3>In publishing and graphic design, Lorem ipsum</h3>
-        </div>
-
-        <div className="row mt-2 card-wrap">
-            {
-              SampleBasicData?.map((item, i)=>{
-                return(
-                  <div key={i} className="col-md-4 ">
-                    <div className="card">
-                      <img src={item?.Image} className="card-img-top" alt="..."/>
-                      <div className="card-body">
-                        <div className="row"> 
-                        <div className="col-md-9"><h5 className="card-title"> {item?.Name} </h5></div>
-                        <div className="col-md-3">
-                          <img src={item?.PlatformImage} className="card-img-top" alt="..." />
-                      </div>
-                      </div>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" className="btn btn-danger">Buy now</a>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })
-            }
-        </div>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="container p-3">
+        <AdNotice />
+        <SearchBar />
       </div>
     </div>
   )
 }
 
 export default Home;
+
+const SearchBar = () => {
+  return(
+    <div className="row searchbar-wrapper mt-5">
+      <div className="col-md-9">
+        <div className="form-group">
+          <input type="text" className="form-control search-field"  placeholder="Search product" />
+        </div>
+      </div>
+      <div className="col-md-3">
+        <SwitchTabber
+          name='booking_type'
+          label='Booking Type'
+          options={[
+            { value: 'tele_in', label: 'Tele in', img : ICONHOR1 },
+            { value: 'walk_in', label: 'Walk in', img : ICONVER2 },
+          ]}
+          defaultValue='tele_in'
+        />
+      </div>
+      
+    </div>
+  )
+}
+
+
+
+
+
+
+const SwitchTabber= (props) => { 
+  const { options, name, defaultValue } = props;
+  const [ toggled, setToggled ] = useState(null);
+
+  useEffect(() => {
+    setToggled(defaultValue);
+  }, [ defaultValue ]);
+
+  const handleChange = (event) => {
+    const value = event.currentTarget.value;
+    console.log(value);
+    setToggled(value);
+  };
+
+  return(
+    <div className="tabber-wrap">
+      <div className="tabber">
+        {
+          options.map((option, index) => (
+            <>
+              <input type="radio" name='hai' id={option.value} />
+              <label htmlFor={ option.value } className="label">
+                <img src={option?.img} alt="" style={{width: "4rem"}} />
+              </label>
+            </>
+          ))
+        }
+        <div className="blob" />
+      </div>
+            
+    </div>
+    
+  );
+};
+
+
+
+const AdNotice = () =>{
+  return (
+    <div className="add-notice-wrapper p-5 mt-3">
+      <div className="row">
+        <div className="col-md-6 content-section">
+          <h1 className="ad-heading mt-3">Lorem ipsum is a placehold text commonly used</h1>
+          <p className='ad-sub-text mt-4'>
+            ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+          </p>
+          <button className='btn mt-3'>More</button>
+        </div>
+        <div className="col-md-6 postion-relative ">
+          <img className='postion-absolute img-ad-banner ' src={ADDIMG} alt="" />
+        </div>
+      </div>
+    </div>
+  )
+}

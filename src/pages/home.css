@@ -1,3 +1,114 @@
-.card-wrap{
-    justify-content: center;
+.root-wrap{
+    background: #F3F2EF;
 }
+
+/*
+-- AdNotice start --
+*/
+.add-notice-wrapper{
+    width: 100%;
+    height: 470px;
+    border-radius: 15px;
+    background: #000;
+}
+.content-section h1.ad-heading{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.content-section p.ad-sub-text{
+    color: #C4C4C4;
+    font-family: inherit;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.38px;
+}
+.content-section button{
+    width: 136px;
+    height: 42px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 7px;
+    background: #5D6DFD;
+}
+img.postion-absolute.img-ad-banner {
+    width: 100%;
+    top: -15px;
+    height: 26rem;
+}
+
+/*
+-- AdNotice End --
+*/
+
+/*
+-- SearchBar Start --
+*/
+.searchbar-wrapper .search-field{
+    border-radius: 7px;
+    width: 100%;
+    height: 55px;
+    flex-shrink: 0;
+    border: 0;
+    padding-left: 29px;
+}
+.tabber-wrap {
+    display: flex;
+}
+.tabber {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    z-index: 0;
+    color: rgb(138, 138, 138);
+    font-size: 0.875rem;
+    background-color: #FFFFFF;
+    border-radius: 3rem;
+    width: 14.2rem;
+}
+.tabber-wrap .tabber input[type=radio] {
+    display: none;
+}
+.tabber-wrap .tabber label {
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.3rem 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+input[type="radio"]:checked + label {
+    background: red;
+}
+/*
+-- SearchBar End --
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-- BASE start --
+*/
+.postion-absolute{
+    position: absolute !important;
+}
+.postion-relative{
+    position: relative !important;
+}
+/*
+-- BASE End --
+*/
