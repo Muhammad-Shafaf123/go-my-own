@@ -59,7 +59,7 @@ img.postion-absolute.img-ad-banner {
 }
 .tabber-wrap {
     display: flex;
-    margin-left: 5rem;
+    margin-left: 23px;
 }
 .tabber {
     position: relative;
@@ -90,7 +90,29 @@ input[type="radio"]:checked + label {
 */
 
 
+/*
+-- BodyList start --
+*/
+.list-item-wrapper .list-card{
+    width: 623px;
+    height: 485px;
 
+    border-radius: 12px;
+    border: 1px solid #FFFDFD;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.list-item-wrapper .img-brand-logo{
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.list-item-wrapper .img-brand-logo img{
+    width: 11rem;
+}
+/*
+-- BodyList end --
+*
 
 
 
