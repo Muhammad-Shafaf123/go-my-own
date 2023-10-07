@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/go-my-own/static/css/main.465bade7.css",
+    "main.js": "/go-my-own/static/js/main.e83b4256.js",
+    "static/media/wengang-zhai-_fOL6ebfECQ-unsplash.jpg": "/go-my-own/static/media/wengang-zhai-_fOL6ebfECQ-unsplash.d880130a1de1eb763cf8.jpg",
+    "static/media/flipkart-logo-39903.png": "/go-my-own/static/media/flipkart-logo-39903.1c3afd3aaa169bcc5f17.png",
+    "static/media/ad-banner-sample.png": "/go-my-own/static/media/ad-banner-sample.ce5bc50c86ffbf9e3e06.png",
+    "static/media/flipkart-logo-39906.png": "/go-my-own/static/media/flipkart-logo-39906.47ff22790b3871c932f2.png",
+    "static/media/5-running-nike-flip.webp": "/go-my-own/static/media/5-running-nike-flip.75267497fe8ca2151c06.webp",
+    "static/media/ajio-red-nike.webp": "/go-my-own/static/media/ajio-red-nike.3a6ac248b2a42963c60d.webp",
+    "static/media/logo-myntra-41466.png": "/go-my-own/static/media/logo-myntra-41466.d6057d625166331bda00.png",
+    "static/media/basket-ball-shoes-nike-flip.webp": "/go-my-own/static/media/basket-ball-shoes-nike-flip.8dba4b6af777441f5877.webp",
+    "static/media/debut-premium-nike-flip.webp": "/go-my-own/static/media/debut-premium-nike-flip.588680b1d58ba7ce7428.webp",
+    "static/media/amazon-png-logo-vector-6701.png": "/go-my-own/static/media/amazon-png-logo-vector-6701.740aa7b25a15d6df9b43.png",
+    "static/media/3-running-gyn-nike.webp": "/go-my-own/static/media/3-running-gyn-nike.bf76b87a05b2ab2e7ce4.webp",
+    "static/media/Air-max-runnign-nike-flip.webp": "/go-my-own/static/media/Air-max-runnign-nike-flip.4ebfd1d2d7591fee9ec7.webp",
+    "static/media/nike-flikpart-red.webp": "/go-my-own/static/media/nike-flikpart-red.e32ee91b3194e394b80d.webp",
+    "static/media/football-shoe-nike-flip.webp": "/go-my-own/static/media/football-shoe-nike-flip.044ac3561a2afb78fbde.webp",
+    "static/media/AJIO.png": "/go-my-own/static/media/AJIO.561f64f8b40cd9603cc0.png",
+    "static/media/amazon-png-logo-vector-6706.png": "/go-my-own/static/media/amazon-png-logo-vector-6706.7df5808dfe835d3c8819.png",
+    "static/media/ajio-seeklogo.com.svg": "/go-my-own/static/media/ajio-seeklogo.com.ecaf0cad8f829f8c46cf97210426e438.svg",
+    "index.html": "/go-my-own/index.html",
+    "main.465bade7.css.map": "/go-my-own/static/css/main.465bade7.css.map",
+    "main.e83b4256.js.map": "/go-my-own/static/js/main.e83b4256.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.465bade7.css",
+    "static/js/main.e83b4256.js"
+  ]
+}
