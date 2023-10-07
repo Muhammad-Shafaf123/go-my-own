@@ -1,13 +1,13 @@
 {
-  "homepage": "https://shopperschoicehub.com/",
+  "homepage": "https://Muhammad-Shafaf123.github.io/go-my-own",
   "name": "gomyown",
   "version": "1.0.0",
   "description": "demo project",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-paged -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
